@@ -1,0 +1,79 @@
+@import "reset";
+@import "grid";
+@import "container";
+@import "navBar";
+@import "home";
+@import "movieCard";
+@import "search";
+@import "movie";
+@import "serie";
+
+body {
+  margin-top: 8rem;
+  background-color: #00101c;
+  background-image: url("../../assets/sass/img/bgdark.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  min-height: calc(100vh - 8rem) !important;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.load-card {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  display: inline-block;
+  width: 7rem;
+  height: 7rem;
+  border: 0.7rem solid #f3f3f3;
+  border-top: 0.4rem solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #00101c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3d3d3d;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #585858;
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); /* Define o ponto de partida do elemento */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Define o ponto final do elemento */
+  }
+}
+
+.animateIn {
+  animation: animateIn 1s forwards; /* Duração da animação e manter o estado final */
+}
+
